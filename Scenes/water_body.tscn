@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://yaq4m8hi8jmx"]
+
+[ext_resource type="Script" path="res://Scripts/Water_Body.gd" id="1_0dodg"]
+[ext_resource type="Shader" uid="uid://cawqa7mcrt5xp" path="res://new_shader.tres" id="2_yxojq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_apbb6"]
+shader = ExtResource("2_yxojq")
+shader_parameter/tint = Vector4(0, 10, 30, 0)
+
+[node name="Water_Body" type="Node2D"]
+position = Vector2(90, 1)
+scale = Vector2(0.997596, 1.03084)
+script = ExtResource("1_0dodg")
+spring_number = 20
+depth = 20
+
+[node name="Water_Polygon" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_apbb6")
+position = Vector2(7.01687, -3.88033)
+polygon = PackedVector2Array(-96.2313, 5.8205, 24.0578, 1.94017, 27.0651, 61.1152, -99.2386, 56.2648)
